@@ -52,6 +52,11 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 43 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 7.0
+}, {
 "frames": [ ExtResource( 23 ), ExtResource( 40 ), ExtResource( 34 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 39 ), ExtResource( 27 ), ExtResource( 37 ), ExtResource( 24 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 35 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 38 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 41 ), ExtResource( 36 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "Walk",
@@ -61,24 +66,20 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 13.0
-}, {
-"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 43 ), ExtResource( 42 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16.5, 36.75 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 1 )
 animation = "Walk"
-frame = 5
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
