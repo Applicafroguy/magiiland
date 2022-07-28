@@ -16,6 +16,7 @@ func _physics_process(delta):
 	
 	if input.x == 0:
 		if is_on_floor():
+			$AnimatedSprite.animation = "Idle"
 			apply_friction()
 	else:
 		move_player(input.x)
@@ -45,6 +46,12 @@ func falling():
 func jump():
 	if Input.is_action_just_pressed("ui_up"):
 		velocity.y = JUMP_FORCE
+		$AnimatedSprite.animation = "Jump"
 
 func move_player(direction):
 	velocity.x = move_toward(velocity.x, SPEED * direction, 20)
+	$AnimatedSprite.animation = "Walk"
+	if direction > 0:
+		$AnimatedSprite.flip_h = false
+	elif direction < 0:
+		$AnimatedSprite.flip_h = true
