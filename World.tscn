@@ -15,29 +15,55 @@ glow_enabled = true
 position = Vector2( 128, 408 )
 script = ExtResource( 5 )
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Plant 1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 179, -126 )
+scale = Vector2( 0.2, 0.2 )
+z_index = -2
+frame = 84
+
+[node name="Plant 3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 199, -123 )
+scale = Vector2( 0.2, 0.2 )
+z_index = -2
+frame = 84
+
 [node name="Player2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 71, -173 )
+position = Vector2( -5, -157 )
 z_index = -1
 ACCELARATE_FALLING_GRAVITY = 6
 FALLING_FORCE = -70
 
 [node name="Grass" parent="." instance=ExtResource( 3 )]
 scale = Vector2( 0.2, 0.2 )
+
+[node name="Plant 4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -119.18, -357.572 )
+rotation = 2.52326
+scale = Vector2( 0.258229, 0.264152 )
 z_index = -2
-tile_data = PoolIntArray( -1179554, 6, 0, -917435, 6, 0, -786434, 10, 0, -851936, 10, 0, -851927, 10, 0, -851920, 10, 0, -786424, 10, 0 )
+frame = 83
+
+[node name="Plant 2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -148, -362 )
+rotation = 3.04362
+scale = Vector2( 0.320461, 0.249969 )
+z_index = -2
+frame = 84
+
+[node name="Background" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 0.2, 0.2 )
+tile_data = PoolIntArray( -2883624, 1, 0, -2883609, 1, 0, -2883594, 1, 0, -2293817, 0, 0, -1638457, 0, 0, -1245203, 25, 0, -589864, 1, 0, -589849, 1, 0, -589834, 1, 0, -655355, 1, 0 )
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
-position = Vector2( 102, -11 )
 scale = Vector2( 0.2, 0.2 )
-tile_data = PoolIntArray( -917427, 2, 0, -524300, 0, 0, -589807, 1, 0, -589791, 1, 0, -589768, 2, 0, -130977, 2, 0, 196677, 0, 0 )
+tile_data = PoolIntArray( -655399, 27, 0, -720896, 27, 0, -524307, 27, 0 )
 
-[node name="Plant 1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 183, -137 )
+[node name="TileMap3" parent="." instance=ExtResource( 1 )]
 scale = Vector2( 0.2, 0.2 )
-z_index = -2
-frame = 89
+tile_data = PoolIntArray( -3014652, 5, 0, -2228248, 20, 0, -2162717, 20, 0 )
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 1 )
-
-[editable path="TileMap"]
+[node name="TileMap4" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 0.2, 0.2 )
